@@ -5,8 +5,9 @@ const pool = new Pool({
   host: "localhost",
   user: "postgres",
   password: "5411747",
-  database: "farmaciabdd",
-  port: process.env.DB_PORT,
+  database: "farmaciavdl",
+  port: 5432,
+  JWT_SECRET: "jmmb",
   ssl: process.env.DB_SSL ? { rejectUnauthorized: false } : false,
 });
 
