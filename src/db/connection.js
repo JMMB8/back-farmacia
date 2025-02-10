@@ -2,13 +2,15 @@ require("dotenv").config();
 const { Pool } = require("pg");
 
 const pool = new Pool({
-  host: "localhost",
-  user: "postgres",
-  password: "5411747",
-  database: "farmaciavdl",
-  port: 5432,
-  JWT_SECRET: "jmmb",
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
+  JWT_SECRET: process.env.JWT_SECRET,
   ssl: process.env.DB_SSL ? { rejectUnauthorized: false } : false,
+ 
+
 });
 
 pool

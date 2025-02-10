@@ -8,8 +8,8 @@ const {
 const authMiddleware = require("../middlewares/authMiddleware.js");
 
 const router = Router();
-router.post("/usuarios", registerUser);
+router.post("/users", registerUser);
 router.post("/login", loginUser);
-router.get("/usuarios", authMiddleware, getUserProfile);
+router.get("/users", authMiddleware, getUserProfile);
 
 module.exports = router;
